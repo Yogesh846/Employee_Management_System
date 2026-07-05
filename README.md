@@ -1,155 +1,152 @@
 # 👨‍💼 Employee Management System
 
-A full-stack Employee Management System developed using **Spring Boot**, **React.js**, and **MySQL**. The application enables organizations to efficiently manage employee records through a secure and user-friendly interface. It provides complete CRUD functionality with RESTful APIs and seamless frontend-backend integration.
+A full-stack **Employee Management System** developed using **Spring Boot, ReactJS, MySQL, and Bootstrap**. This application enables organizations to efficiently manage employee records with secure authentication, role-based access, and a responsive user interface.
+
+---
+
+## 📌 Project Overview
+
+The Employee Management System is a web-based application that simplifies employee management by providing features such as employee registration, updating employee information, searching employees, and secure access using authentication and authorization.
+
+This project demonstrates full-stack development skills including REST API development, database integration, frontend-backend communication, and secure application development.
 
 ---
 
 ## 🚀 Features
 
-* Add New Employees
-* View Employee List
-* Update Employee Details
-* Delete Employees
-* Search Employee Records
-* Responsive User Interface
-* RESTful API Integration
-* MySQL Database Connectivity
-* Exception Handling
-* Layered Architecture
+- 🔐 User Authentication (Login)
+- 👥 Role-Based Access Control (Admin/User)
+- ➕ Add Employee
+- 📋 View Employee List
+- ✏️ Update Employee Details
+- ❌ Delete Employee (Admin Only)
+- 🔍 Search Employee by Name
+- 📱 Responsive Bootstrap UI
+- 🌐 RESTful API Integration
+- 🗄️ MySQL Database
+- ⚠️ Exception Handling
+- 🔄 CRUD Operations
 
 ---
 
 ## 🛠️ Tech Stack
 
+### Frontend
+- React.js
+- JavaScript (ES6)
+- Bootstrap 5
+- Axios
+- React Router DOM
+
+### Backend
+- Java
+- Spring Boot
+- Spring MVC
+- Spring Data JPA
+- Spring Security
+- Hibernate
+
+### Database
+- MySQL
+
+### Tools & Technologies
+- Maven
+- Postman
+- Git & GitHub
+- Eclipse / IntelliJ IDEA
+- VS Code
+
+---
+
+## 📂 Project Structure
+
 ### Backend
 
-* Java 17
-* Spring Boot
-* Spring Data JPA
-* Hibernate
-* REST APIs
-* Maven
+```
+employee-management-system
+│
+├── controller
+├── service
+├── repository
+├── entity
+├── dto
+├── config
+├── security
+├── exception
+└── EmployeeManagementApplication
+```
 
 ### Frontend
 
-* React.js
-* JavaScript (ES6+)
-* HTML5
-* CSS3
-* Bootstrap
-* Axios
-
-### Database
-
-* MySQL
-
-### Tools
-
-* Git
-* GitHub
-* Postman
-* IntelliJ IDEA
-* Visual Studio Code
-
----
-
-## 📁 Project Structure
-
-```text
-Employee_Management_System/
+```
+src
 │
-├── Backend/
-│   ├── src/
-│   ├── pom.xml
-│   └── ...
-│
-├── emsfrontend/
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   └── ...
-│
-└── README.md
+├── components
+├── services
+├── pages
+├── App.js
+└── index.js
 ```
 
 ---
 
-## ⚙️ Prerequisites
+## ⚙️ Installation
 
-Before running the project, install:
-
-* Java 17 or later
-* Maven
-* Node.js
-* npm
-* MySQL
-* Git
-
----
-
-## 🔧 Backend Setup
-
-### Clone the repository
+### Clone Repository
 
 ```bash
-git clone https://github.com/Yogesh846/Employee_Management_System.git
+git clone https://github.com/yourusername/employee-management-system.git
 ```
 
-### Navigate to the backend
+---
 
-```bash
-cd Employee_Management_System/Backend
-```
+### Backend Setup
 
-### Configure MySQL
-
-Update the `application.properties` file:
+1. Open project in Eclipse or IntelliJ.
+2. Configure MySQL database.
+3. Update `application.properties`.
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/employee_db
-spring.datasource.username=your_username
-spring.datasource.password=your_password
+spring.datasource.url=jdbc:mysql://localhost:3306/ems
+spring.datasource.username=root
+spring.datasource.password=yourpassword
 
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-### Run the Spring Boot application
+4. Run Spring Boot Application.
 
-```bash
-mvn spring-boot:run
+Server will start at:
+
 ```
-
-The backend will start at:
-
-```text
 http://localhost:8080
 ```
 
 ---
 
-## 💻 Frontend Setup
+### Frontend Setup
 
-Navigate to the frontend folder:
+Navigate to frontend folder
 
 ```bash
-cd ../emsfrontend
+cd ems-frontend
 ```
 
-Install dependencies:
+Install dependencies
 
 ```bash
 npm install
 ```
 
-Start the React application:
+Run React Application
 
 ```bash
 npm start
 ```
 
-The frontend will start at:
+Application runs at
 
-```text
+```
 http://localhost:3000
 ```
 
@@ -157,68 +154,69 @@ http://localhost:3000
 
 ## 📡 REST API Endpoints
 
-### Employee APIs
-
-| Method | Endpoint              | Description             |
-| ------ | --------------------- | ----------------------- |
-| GET    | `/api/employees`      | Get all employees       |
-| GET    | `/api/employees/{id}` | Get employee by ID      |
-| POST   | `/api/employees`      | Add a new employee      |
-| PUT    | `/api/employees/{id}` | Update employee details |
-| DELETE | `/api/employees/{id}` | Delete an employee      |
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | /api/auth/register | Register User |
+| POST | /api/auth/login | Login |
+| GET | /api/employees | Get All Employees |
+| GET | /api/employees/{id} | Get Employee By ID |
+| POST | /api/employees | Add Employee |
+| PUT | /api/employees/{id} | Update Employee |
+| DELETE | /api/employees/{id} | Delete Employee |
+| GET | /api/employees/search?name= | Search Employee |
 
 ---
 
 ## 📸 Screenshots
 
-Add screenshots of your application here, such as:
+Add screenshots here.
 
-* Dashboard
-* Employee List
-* Add Employee Form
-* Update Employee Form
-* Delete Confirmation
+Example:
 
----
-
-## 🏗️ Architecture
-
-* React.js Frontend
-* Spring Boot REST APIs
-* Spring Data JPA & Hibernate
-* MySQL Database
+- Login Page
+- Dashboard
+- Employee List
+- Add Employee
+- Update Employee
 
 ---
 
-## 📈 Future Enhancements
+## 🔒 Security
 
-* Employee Authentication
-* Role-Based Access Control (Admin/HR)
-* Pagination & Sorting
-* Advanced Search & Filters
-* Profile Image Upload
-* Email Notifications
-* Dashboard Analytics
-* Docker Deployment
-* CI/CD Integration
+- Spring Security
+- Authentication
+- Role-Based Authorization
+- Password Encryption (BCrypt)
 
 ---
 
-## 🤝 Contributing
+## 🎯 Learning Outcomes
 
-Contributions are welcome.
+Through this project I gained practical experience in:
 
-1. Fork the repository.
-2. Create a new feature branch.
-3. Commit your changes.
-4. Push to your branch.
-5. Open a Pull Request.
+- Building REST APIs using Spring Boot
+- Implementing CRUD operations
+- React component development
+- React Router
+- API integration using Axios
+- Database design using MySQL
+- Spring Security
+- Role-Based Access Control
+- Git & GitHub version control
 
 ---
 
-## 📄 License
+## 🔮 Future Enhancements
 
-This project is created for learning and portfolio purposes.
+- JWT Authentication
+- Pagination
+- Sorting & Filtering
+- Export Employee Data (PDF/Excel)
+- Profile Image Upload
+- Email Notifications
+- Dashboard Analytics
+- Docker Deployment
+- Cloud Deployment
 
 ---
 
@@ -226,10 +224,14 @@ This project is created for learning and portfolio purposes.
 
 **Yogesh Kachare**
 
-**Java Full Stack Developer**
+📧 Email: yogeshkachare43@gmail.com
 
-* 📧 Email: [yogeshkachare43@gmail.com](mailto:yogeshkachare43@gmail.com)
-* 📱 Mobile: +91 9309816198
-* 💼 GitHub: https://github.com/Yogesh846
+📱 Mobile: +91 9309816198
+
+💼 Java Full Stack Developer
+
+---
+
+## ⭐ Support
 
 If you found this project useful, please consider giving it a ⭐ on GitHub.
