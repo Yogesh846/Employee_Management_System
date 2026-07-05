@@ -152,5 +152,5 @@ This project is created for learning and educational purposes.
 **Yogesh Kachare**
 
 * Email: [yogeshkachare43@gmail.com](mailto:yogeshkachare43@gmail.com)
-* LinkedIn: Add your LinkedIn profile URL here
+* LinkedIn: https://www.linkedin.com/in/yogesh-kachare-832b6a237/
 * GitHub: https://github.com/Yogesh846
